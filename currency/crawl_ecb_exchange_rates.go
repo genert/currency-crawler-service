@@ -55,7 +55,7 @@ func (c *crawler) CrawlByDate(date time.Time) (ExchangeRates, error) {
 	}
 
 	// Lets loop through result and save values to map.
-	var rates ExchangeRateList
+	var rates = ExchangeRateList{}
 
 	for _, c := range exchangeResult.Cube {
 		// Check that date is in correct format like 2019-09-09 YYY-MM-DD
